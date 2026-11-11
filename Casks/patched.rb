@@ -4,7 +4,7 @@ cask "patched" do
 
   url "https://github.com/birdseeed/patched/releases/download/v#{version}/Patched-#{version}.dmg"
   name "Patched"
-  desc "Free, open source updater for the apps on your Mac"
+  desc "Free, open source app updater that verifies each update before installing"
   homepage "https://patched.im/"
 
   livecheck do
@@ -14,7 +14,7 @@ cask "patched" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Patched.app"
   binary "#{appdir}/Patched.app/Contents/Helpers/patched"
