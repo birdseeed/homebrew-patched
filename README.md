@@ -3,8 +3,11 @@
 [Patched](https://patched.im) is a free, open source Mac app updater. Source: [birdseeed/patched](https://github.com/birdseeed/patched).
 
 ```sh
+brew trust birdseeed/patched
 brew install --cask birdseeed/patched/patched
 ```
+
+Homebrew only loads casks from taps you have chosen to trust, so the first command is needed once.
 
 Patched needs a Mac with Apple silicon and macOS 13 or later. Releases are signed with a Developer ID (Team ID `Y9352JY7U8`) and notarised by Apple. Patched updates itself when you choose Update in its menu, so the cask is marked `auto_updates`; `brew upgrade --greedy` also works.
 
