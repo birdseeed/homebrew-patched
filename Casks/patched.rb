@@ -19,9 +19,22 @@ cask "patched" do
   app "Patched.app"
   binary "#{appdir}/Patched.app/Contents/Helpers/patched"
 
-  zap trash: [
-    "~/Library/Application Support/Patched",
-    "~/Library/Caches/Patched",
-    "~/Library/Preferences/im.patched.app.plist",
-  ]
+  uninstall quit: "im.patched.app"
+
+  zap launchctl: "im.patched.check",
+      trash:     [
+        "~/Library/Application Support/.patched-state-migration.json",
+        "~/Library/Application Support/.patched-state-migration.lease",
+        "~/Library/Application Support/.patched-state-migration.lock",
+        "~/Library/Application Support/mac-updater",
+        "~/Library/Application Support/Patched",
+        "~/Library/Caches/im.patched.app",
+        "~/Library/Caches/mac-updater",
+        "~/Library/Caches/Patched",
+        "~/Library/HTTPStorages/im.patched.app",
+        "~/Library/LaunchAgents/im.patched.check.plist",
+        "~/Library/Logs/Patched",
+        "~/Library/Preferences/im.patched.app.plist",
+        "~/Library/Saved Application State/im.patched.app.savedState",
+      ]
 end
