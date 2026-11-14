@@ -1,6 +1,6 @@
 cask "patched" do
-  version "0.2.4"
-  sha256 "eb00d71b41b28c069d07de1eb3fbb5c78b701220d1d79c8a10e624ec724477fc"
+  version "0.3.0"
+  sha256 "1dfde6969d7eedb90f2d1ed15d7f11ec4735a4412d4f7216ebc0c445f816e496"
 
   url "https://github.com/birdseeed/patched/releases/download/v#{version}/Patched-#{version}.dmg"
   name "Patched"
